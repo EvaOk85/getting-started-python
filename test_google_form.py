@@ -16,5 +16,5 @@ def test_search_selene (size_browser):
 
 def test_search_abrakadabra (size_browser):
     browser.element('[name="q"]').should(be.blank).type('rhjkioswwwww').press_enter()
-    browser.element('[id="result-stats"]')
+    browser.element('[id="result-stats"]').should(have.text('Результатов: примерно 0'))
     print('Ничего не нашли')
